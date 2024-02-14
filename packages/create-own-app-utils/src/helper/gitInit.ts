@@ -1,4 +1,4 @@
-import type { TFunctionReturn, TMyErrorList} from "oh-my-error";
+import type { TFunctionReturn, TMyErrorList } from "oh-my-error";
 import { myErrorWrapper } from "oh-my-error";
 import { execSync } from "node:child_process";
 
@@ -28,12 +28,11 @@ const ErrorList = {
 export const gitInit = (path: string, ...options: string[]): TFunctionReturn<void> => {
 	const [, error] = myErrorWrapper(execSync)("git version");
 	if (error) return [ErrorList.gitNotInstalled, true];
-	const finalPrompt = `cd ${path} && git init${ options.join(" ")}`;
+	const finalPrompt = `cd ${path} && git init${options.join(" ")}`;
 
 	const [, error2] = myErrorWrapper(execSync)(finalPrompt);
 	if (error2) return [ErrorList.ExecutionProblem, true];
 	return [void 0, false];
 };
 
-
-export default gitInit
+export default gitInit;
