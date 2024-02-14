@@ -1,0 +1,4 @@
+*.hbs
+dist/*
+lib/*
+*.md
