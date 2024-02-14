@@ -1,1 +1,1 @@
-console.log("Hello from create-own-app-utils");
+export * from "helper";

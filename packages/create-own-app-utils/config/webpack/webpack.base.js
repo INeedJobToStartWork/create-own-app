@@ -19,6 +19,5 @@ export default merge(WebpackConfig, {
 		alias: {
 			"@": resolve(__dirname, "src/")
 		}
-	},
-
+	}
 });
