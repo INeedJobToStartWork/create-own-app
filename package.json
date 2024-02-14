@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "turbo dev --turbo",
+    "dev": "turbo dev",
     "build": "turbo build",
     "build:npm": "turbo build:npm",
     "start": "turbo start",

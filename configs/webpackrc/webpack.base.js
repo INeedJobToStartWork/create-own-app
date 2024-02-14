@@ -1,5 +1,5 @@
-import CopyPlugin from "copy-webpack-plugin";
 import { resolve } from "path";
+import JsonMinimizerPlugin from "json-minimizer-webpack-plugin";
 
 const __dirname = resolve();
 const PATHOUT = resolve(__dirname, "lib");
@@ -36,5 +36,10 @@ export default {
 			"@": resolve(__dirname, "src/")
 		}
 	},
+	optimization: {
+		minimize: true,
+		minimizer: ["...", new JsonMinimizerPlugin()]
+	},
 	target: "node"
+	
 };

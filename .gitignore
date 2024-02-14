@@ -4,6 +4,12 @@
 **/vscode/**
 **/dist/**
 **/lib/**
+lib
+/lib
+dist
+/dist
+.env
+**/.env
 
 
 
